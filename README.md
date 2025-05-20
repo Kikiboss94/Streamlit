@@ -56,6 +56,7 @@ Streamlit-Kilian/
 ├── scrapping.py                  # Script de scraping des données
 ├── nettoyage.py                  # Script de nettoyage et géocodage
 ├── app.py                        # Application Streamlit principale
+├── rquirements.txt               # Liste des dépendences nécessaires
 ├── coworking_spaces_idf.csv      # Données brutes récupérées (avant nettoyage)
 ├── coworking_spaces_idf_cleaned.csv  # Données nettoyées et géocodées
 └── README.md                     # Ce fichier README
