@@ -2,7 +2,7 @@ Streamlit Kilian
 
 🏢 Présentation du projet
 
-Le projet **Streamlit Kilian** est une application web de visualisation de données qui cible les espaces de coworking en Île-de-France. Il récupère automatiquement les informations de chaque espace depuis le site *leportagesalarial.com*, puis effectue un nettoyage et un géocodage de ces données. Enfin, l’application affiche ces espaces sur une carte interactive Folium intégrée dans une interface **Streamlit**, permettant d’explorer facilement leur répartition géographique.
+Le projet **Streamlit Kilian** est une application web de visualisation de données qui cible les espaces de coworking en Île-de-France. Il récupère automatiquement les informations de chaque espace depuis le site leportagesalarial.com, puis effectue un nettoyage et un géocodage de ces données. Enfin, l’application affiche ces espaces sur une carte interactive Folium intégrée dans une interface Streamlit, permettant d’explorer facilement leur répartition géographique.
 
 ✨ Fonctionnalités
 
@@ -10,8 +10,8 @@ Le projet **Streamlit Kilian** est une application web de visualisation de donn�
 * **Nettoyage et géocodage :** suppression des doublons, nettoyage des textes et géocodage des adresses (obtenir latitude/longitude via l’API Nominatim d’OpenStreetMap).
 * **Carte interactive :** visualisation des espaces de coworking sur une carte Folium avec marqueurs (cluster) et popups informatifs (nom, adresse, téléphone, lien web).
 * **Recherche par nom :** champ de recherche pour filtrer dynamiquement les espaces selon leur nom.
-* **Affichage par arrondissement :** détection de l’arrondissement parisien de chaque adresse et regroupement sur la carte.
-* **Graphique de répartition :** diagramme à barres (Matplotlib) affichant le nombre d’espaces de coworking par arrondissement de Paris.
+* **Affichage par département :** détection du département  de chaque adresse et regroupement sur la carte.
+* **Graphique de répartition :** diagramme à barres (Matplotlib) affichant le nombre d’espaces de coworking par département d'Ile de France.
 
 🧾 Dépendances principales
 
@@ -78,17 +78,17 @@ Streamlit-Kilian/
 
   * Chargement des données propres (`coworking_spaces_idf_cleaned.csv`) dans un DataFrame Pandas.
   * Champ de recherche (`st.text_input`) pour filtrer les espaces selon le nom saisi.
-  * Calcul automatique de l’**arrondissement parisien** à partir de l’adresse (recherche regex sur le code postal « 75xxx »).
+  * Calcul automatique du **département en Ile de France** à partir de l’adresse (recherche regex sur le code postal « 75xxx »).
   * Création d’une carte **Folium** centrée sur la moyenne des coordonnées, avec un *MarkerCluster* pour regrouper les points. Pour chaque espace, un marqueur (ici un cercle noir) est ajouté avec un popup contenant le nom, l’adresse, le téléphone et un lien vers le site web.
   * Affichage de la carte interactive dans Streamlit via `st_folium`.
-  * Génération d’un graphique Matplotlib (barres) montrant le **nombre d’espaces par arrondissement**. Ce graphique est stylisé pour s’harmoniser avec l’interface et affiché avec `st.pyplot`.
+  * Génération d’un graphique Matplotlib (barres) montrant le **nombre d’espaces par département**. Ce graphique est stylisé pour s’harmoniser avec l’interface et affiché avec `st.pyplot`.
 
 📊 Aperçu des visualisations
 
 L’application propose deux visualisations principales :
 
-* Carte interactive Folium : affiche tous les espaces de coworking filtrés sur une carte de Paris. Les marqueurs sont groupés en clusters lors du zoom-out. Cliquer sur un marqueur ouvre une fenêtre popup avec les informations détaillées (nom, adresse, téléphone, site web). Le champ de recherche permet de ne visualiser que les espaces correspondant au terme saisi.
-* Graphique par arrondissement : sous la carte, un diagramme à barres représente le nombre d’espaces de coworking pour chaque arrondissement de Paris. Cela permet de voir rapidement la répartition géographique en un coup d’œil.
+* Carte interactive Folium : affiche tous les espaces de coworking filtrés sur une carte de l'Ile de France. Les marqueurs sont groupés en clusters lors du zoom-out. Cliquer sur un marqueur ouvre une fenêtre popup avec les informations détaillées (nom, adresse, téléphone, site web). Le champ de recherche permet de ne visualiser que les espaces correspondant au terme saisi.
+* Graphique par département : sous la carte, un diagramme à barres représente le nombre d’espaces de coworking pour chaque département d'Ile de France. Cela permet de voir rapidement la répartition géographique en un coup d’œil.
 
 📌 À propos
 
