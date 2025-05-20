@@ -13,6 +13,15 @@ Le projet **Streamlit Kilian** est une application web de visualisation de donn�
 * **Affichage par arrondissement :** détection de l’arrondissement parisien de chaque adresse et regroupement sur la carte.
 * **Graphique de répartition :** diagramme à barres (Matplotlib) affichant le nombre d’espaces de coworking par arrondissement de Paris.
 
+🧾 Dépendances principales
+
+Streamlit – Création d'interfaces web interactives.
+Pandas – Manipulation et analyse de données.
+Requests – Requêtes HTTP.
+BeautifulSoup – Analyse de documents HTML.
+Folium – Cartographie interactive.
+Geopy – Géocodage d'adresses.
+
 🛠️ Installation
 
 Suivez ces étapes pour installer et lancer le projet :
