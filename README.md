@@ -28,7 +28,7 @@ Suivez ces étapes pour installer et lancer le projet :
 
 ```bash
 # Cloner le dépôt GitHub
-git clone https://github.com/votre-utilisateur/Streamlit-Kilian.git
+git clone https://github.com/Kikiboss94/Streamlit
 cd Streamlit-Kilian
 
 # Créer et activer un environnement virtuel (Linux/Mac)
