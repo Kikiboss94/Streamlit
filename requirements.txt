@@ -1,0 +1,7 @@
+streamlit
+pandas
+folium
+streamlit-folium
+matplotlib
+beautifulsoup4
+requests
